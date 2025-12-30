@@ -1,28 +1,17 @@
-import Navbar from "../components/Navbar";
-import Sidebar from "../components/Sidebar";
+import Layout from "../layout/Layout";
 import DashboardCard from "../components/DashboardCard";
 
 function Dashboard() {
   return (
-    <div>
-      <Navbar />
+    <Layout>
+      <h2>Dashboard</h2>
 
-      {/* MAIN LAYOUT */}
-     <div style={{ display: "flex", marginTop: "70px" }}>
-  <Sidebar />
-
-  <div style={{ padding: "100px", marginLeft: "300px", flex: 1 }}>
-    <h2>Dashboard</h2>
-
-    <div style={{ display: "flex", gap: "20px" }}>
-      <DashboardCard title="Total Users" value="120" />
-      <DashboardCard title="Courses" value="8" />
-      <DashboardCard title="Active Students" value="95" />
-    </div>
-  </div>
-</div>
-
-    </div>
+      <div style={{ display: "flex", gap: "20px", marginTop: "20px" }}>
+        <DashboardCard title="Total Students" value="120" />
+        <DashboardCard title="Total Courses" value="8" />
+        <DashboardCard title="Active Users" value="95" />
+      </div>
+    </Layout>
   );
 }
 

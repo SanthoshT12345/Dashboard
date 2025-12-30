@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Sidebar() {
   return (
     <div
@@ -5,16 +7,15 @@ function Sidebar() {
         width: "200px",
         background: "#888",
         padding: "10px",
-        height: "calc(100vh - 70px)", // FULL height minus navbar
+        height: "calc(100vh - 70px)",
         position: "fixed",
         top: "70px",
         left: 0,
       }}
     >
-      <p>Home</p>
-      <p>Courses</p>
-      <p>Students</p>
-      <p>Reports</p>
+      <p><Link to="/">Home</Link></p>
+      <p><Link to="/courses">Courses</Link></p>
+      <p><Link to="/students">Students</Link></p>
     </div>
   );
 }
